@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_contrato_trabajo">
+        <t t-name="addons_rrhh.report_contrato_trabajo">
+        <t t-name="report_certificado_calidad">
+                <t t-call="web.external_layout">
+                <t t-call="web.html_container">
+                    <t t-foreach="docs" t-as="o">
+                            <div class="page">
+
+                                <p><h1 align="center"><u>Contrato de Trabajo</u></h1></p>
+
+                                <br></br>
+                                <br></br>
+                                <p align="justify">
+                                    En Santiago, a <span aling="text-left" t-field="o.date_start"/> entre <span aling="text-left" t-field="o.company_id.name"/>,
+                                    R.U.T <span aling="text-left" t-field="o.company_id.document_number"/>, representado(a) legalmente por don(a)<span aling="text-left" t-field="o.company_id.subject_common_name"/>.,
+                                    cédula de identidad <span aling="text-left" t-field="o.company_id.subject_serial_number"/>.., ambos con domicilio en <span aling="text-left" t-field="o.company_id.state_id.name"/>
+                                    comuna de <span aling="text-left" t-field="o.company_id.city_id.name"/>., en adelante el "Empleador" y don <span aling="text-left" t-field="o.employee_id.firstname"/>
+                                    <span aling="text-left" t-field="o.employee_id.middle_name"/><span aling="text-left" t-field="o.employee_id.last_name"/> <span aling="text-left" t-field="o.employee_id.mothers_name"/>
+                                    de nacionalidad <span aling="text-left" t-field="o.employee_id.country_id.name"/>, nacido el <span aling="text-left" t-field="o.employee_id.birthday"/>,
+                                    domiciliado en <span aling="text-left" t-field="o.employee_id.address_home_id.street"/>, comuna de <span aling="text-left" t-field="o.employee_id.address_home_id.city_id.name"/>,
+                                    RUT <span aling="text-left" t-field="o.employee_id.identification_id"/>, proveniente de <span aling="text-left" t-field="o.employee_id.country_id.name"/>.,
+                                    en adelante "Trabajador". Se ha convenido el siguiente Contrato Individual de Trabajo:
+                                </p>
+                                <p align="justify">
+                                    PRIMERO : El trabajador se compromete y obliga a prestar servicios como <span aling="text-left" t-field="o.employee_id.job_id.name"/> u otro trabajo o función similar,
+                                    que tenga directa relación con el cargo ya indicado, en el Departamento <span aling="text-left" t-field="o.department_id.name"/>,
+                                    ubicado en <span aling="text-left" t-field="o.company_id.state_id.name"/> , comuna de <span aling="text-left" t-field="o.company_id.city_id.name"/>,
+                                    pudiendo ser trasladado a otro Departamento o Sección de la Oficina Principal o de cualquiera de las Agencias del Empleador,
+                                    a condición que se trate de labores similares, en la misma ciudad, y sin que ello importe menoscabo para el trabajador, todo ello sujeto
+                                    a las necesidades operativas de la Empresa.
+                                </p>
+                                <p align="justify">
+                                    SEGUNDO : JORNADA DE TRABAJO
+                                    El trabajador cumplirá una jornada semanal ordinaria de <span aling="text-left" t-field="o.resource_calendar_id.name"/> horas, de acuerdo a la siguiente distribución diaria:
+                                    lunes a Viernes, de 8:00AM a 18:00PM horas. La jornada de trabajo será interrumpida con un descanso de 45 minutos, entre las 13:00 y las 13:45 horas, destinados a la colación,
+                                    tiempo que será de cargo del Empleador
+                                </p>
+                                <p align="justify">
+                                    TERCERO: Cuando por necesidades de funcionamiento de la Empresa, sea necesario pactar trabajo en tiempo extraordinario, el Empleado que lo
+                                    acuerde desde luego se obligará a cumplir el horario que al efecto determine la Empleadora, dentro de los límites legales. Dicho acuerdo
+                                    constará por escrito y se firmará por ambas partes, previamente a la realización del trabajo.<br></br>
+                                    A falta de acuerdo, queda prohibido expresamente al Empleado trabajar sobretiempo o simplemente permanecer en el recinto de la Empresa,
+                                    después de la hora diaria de salida, salvo en los casos a que se refiere el inciso precedente.<br></br>
+                                    El tiempo extraordinario trabajado de acuerdo a las estipulaciones precedentes, se remunerará con el recargo legal correspondiente y se
+                                    liquidará y pagará conjuntamente con la remuneración del respectivo período.<br></br>
+                                </p>
+                                <p align="justify">
+                                CUARTO: El empleado percibirá un sueldo de $ <span aling="text-left" t-field="o.wage"/> mensuales, pagaderos por meses vencidos.
+                                Las deducciones que la Empleadora podrá según los casos - practicar a las remuneraciones, son todas aquéllas que dispone el artículo 58
+                                del Código del Trabajo.<br></br>
+                                </p>
+                                <p align="justify">
+                                    QUINTO : El trabajador, asimismo, acepta y autoriza al Empleador para que haga las deducciones que establecen las leyes vigentes y,
+                                    para que le descuente el tiempo no trabajado debido a atrasos, inasistencias o permisos y, además, la rebaja del monto de las multas
+                                    establecidas en el Reglamento Interno de Orden, Higiene y Seguridad, en caso que procedieren.<br></br>
+                                </p>
+                                <p align="justify">
+                                    SEXTO: La Empresa se obliga a pagar al empleado una gratificación anual equivalente al 25% (veinticinco por ciento) del total de las
+                                    remuneraciones mensuales que éste hubiere percibido en el año, con tope de 4,75 Ingresos Mínimos Mensuales.
+                                    Esta gratificación se calculará, liquidará y anticipará mensualmente en forma coetánea con la remuneración del mes respectivo,
+                                    siendo cada abono equivalente a la doceava parte de la gratificación anual.
+                                    La gratificación así convenida es incompatible y sustituye a la que resulte de la aplicación de los artículos 47 y siguientes del
+                                    Código del Trabajo.<br></br>
+                                    Para los efectos de cotejar la gratificación convenida en esta cláusula con la que, según la ley, eventualmente podría corresponder
+                                    al Empleado, los valores anticipados mensualmente se reajustarán en conformidad con lo dispuesto en el artículo 63 del Código del Trabajo,
+                                    y se entenderá que fueron abonados con carácter de anticipos de dichas gratificaciones legales.
+                                    Con todo, si las sumas anticipadas a título de gratificación convencional resultaren mayores que las que legalmente correspondieren
+                                    al Empleador, el exceso se consolidará en su beneficio.<br></br>
+                                </p>
+                                <p align="justify">
+                                    SÉPTIMO: El empleador se compromete a otorgar o suministrar al trabajador los siguientes beneficios:<br></br>
+                                    a) <span>Colación  : </span><span aling="text-left" t-field="o.colacion"/><br></br>
+                                    b) <span>Movilización : </span><span aling="text-left" t-field="o.movilizacion"/><br></br>
+                                    
+                                    El trabajador se obliga y compromete expresamente a cumplir las instrucciones que le sean impartidas por su jefe inmediato o
+                                    por la Gerencia de la empresa y, acatar en todas sus partes las disposiciones establecidas en el Reglamento de Orden, Higiene y Seguridad
+                                    las que declara conocer y que, para estos efectos se consideran parte integrante del presente contrato, reglamento del cual el trabajador
+                                    recibe un ejemplar en este acto.<br></br>
+                                </p>
+                                <p align="justify">
+                                    OCTAVO : Las partes acuerdan en este acto que los atrasos reiterados, sin causa justificada, de parte del trabajador, se considerarán
+                                    incumplimiento grave de las obligaciones que impone el presente contrato y darán lugar a la aplicación de la caducidad del contrato,
+                                    contemplada en el art. .160 Nº7 del Código del Trabajo.
+                                    Se entenderá por atraso reiterado el llegar después de la hora de ingreso durante 3 días seguidos o no, en cada mes calendario. Bastará
+                                    para acreditar esta situación la constancia en el respectivo Control de Asistencia.<br></br>
+                                </p>
+                                <p align="justify">
+                                    NOVENO: El presente contrato regirá <span aling="text-left" t-field="o.date_start"/> pero cualquiera de las partes, o ambas, según el caso,
+                                    podrán ponerle término en cualquier momento con arreglo a la ley.<br></br>
+                                </p>
+                                <p align="justify">
+                                    DECIMO: Para todas las cuestiones a que eventualmente pueda dar origen este contrato, las partes fijan domicilio en la ciudad de Santiago.<br></br>
+                                </p>
+                                <p align="justify">
+                                    DECIMO PRIMERO : Se deja constancia que el Empleado ingresó al servicio de la Empresa con fecha <span aling="text-left" t-field="o.date_start"/>
+                                    El presente contrato se firma en dos ejemplares, quedando en este mismo acto uno en poder de cada contratante.
+                                </p>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+
+                                <div class="row">
+                                    <table class="table-responsive">
+                                          <tr>
+                                            <td><h3>Firma Empleador</h3></td>
+                                            <td><h3>Firma Empleador</h3></td>
+                                          </tr>
+                                          <tr>
+                                            <td><h3>Rut : </h3></td>
+                                            <td><h3>Rut :</h3></td>
+                                          </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </t>
+                     </t>
+                 </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
