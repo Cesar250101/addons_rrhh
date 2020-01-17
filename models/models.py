@@ -6,9 +6,10 @@ from odoo import models, fields, api
 from odoo.tools import DEFAULT_SERVER_DATE_FORMAT as DATE_FORMAT, DEFAULT_SERVER_DATETIME_FORMAT as DATETIME_FORMAT
 
 
-class NewModule(models.Model):
+class ContratoTrabajo(models.Model):
     _inherit = 'hr.contract'
     trabajo_pesado = fields.Boolean(string='Trabajo Pesado?')
+    exento_seguro_cesantia = fields.Boolean(string="Exento Seguro de Cesantia?",  )
 
 class EntradasNomina(models.Model):
     _inherit = 'hr.payslip.input'

@@ -1,5 +1,8 @@
 <odoo>
   <data>
+
+<!-- Inherit Form View to Modify it -->
+
     <record id="cotaco_form_contrato" model="ir.ui.view">
       <field name="name">cotaco.form.contrato</field>
       <field name="model">hr.contract</field>
@@ -7,6 +10,7 @@
       <field name="arch" type="xml">
           <xpath expr="//field[@name='journal_id']" position="after">
             <field name="trabajo_pesado" string="Trabajo Pesado?"/>
+              <field name="exento_seguro_cesantia"/>
           </xpath>
       </field>
     </record>
