@@ -13,6 +13,7 @@ class ContratoTrabajo(models.Model):
 
 class EntradasNomina(models.Model):
     _inherit = 'hr.payslip.input'
+    _order = 'apellido_paterno'
 
     fecha_desde = fields.Date(string="Fecha Desde", required=False, related="payslip_id.date_from")
     fecha_hasta = fields.Date(string="Fecha Hasta", required=False, related="payslip_id.date_to")
