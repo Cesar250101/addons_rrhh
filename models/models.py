@@ -16,4 +16,6 @@ class EntradasNomina(models.Model):
 
     fecha_desde = fields.Date(string="Fecha Desde", required=False, related="payslip_id.date_from")
     fecha_hasta = fields.Date(string="Fecha Hasta", required=False, related="payslip_id.date_to")
+    apellido_paterno = fields.Char(string="Apellido Paterno", related="payslip_id.employee_id.last_name",required=False, )
+    primer_nombre = fields.Char(string="Primer Nombre", related="payslip_id.employee_id.firstname",required=False, )
 

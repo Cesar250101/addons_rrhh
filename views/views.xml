@@ -20,6 +20,8 @@
             <field name="model">hr.payslip.input</field>
             <field name="arch" type="xml">
                 <tree string="Haberes y Descuentos" editable="bottom">
+                    <field name="apellido_paterno"/>
+                    <field name="primer_nombre"/>
                     <field name="name"/>
                     <field name="payslip_id"/>
                     <field name="fecha_desde"/>
