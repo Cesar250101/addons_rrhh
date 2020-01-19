@@ -19,7 +19,7 @@
             <field name="name">hr.payslip.input.method</field>
             <field name="model">hr.payslip.input</field>
             <field name="arch" type="xml">
-                <tree string="Haberes y Descuentos" editable="bottom">
+                <tree string="Haberes y Descuentos" editable="bottom"  default_order="apellido_paterno">
                     <field name="apellido_paterno"/>
                     <field name="primer_nombre"/>
                     <field name="name"/>
