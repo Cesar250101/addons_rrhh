@@ -26,7 +26,7 @@
                     <field name="payslip_id"/>
                     <field name="fecha_desde"/>
                     <field name="fecha_hasta"/>
-                    <field name="amount"/>
+                    <field name="amount" sum ="Total"/>
                 </tree>
             </field>
         </record>
