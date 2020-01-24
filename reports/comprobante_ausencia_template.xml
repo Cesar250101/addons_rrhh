@@ -32,6 +32,8 @@
                                   </tr>
                                 </table>
                                 </p>
+                                <br></br>
+                                <strong><span>Días Pendientes  : </span><span aling="text-left" t-field="o.number_of_days_temp"/></strong>
                          <br></br>
                                 <br></br>
                                 <br></br>
@@ -44,8 +46,8 @@
                                             <td><h4>Firma Empleador</h4></td>
                                           </tr>
                                           <tr>
-                                            <td><h4>-  </h4></td>
-                                            <td><h4>Rut : <span aling="text-left" t-field="o.employee_id.identification_id"/></h4></td>
+                                            <td><h5>-  </h5></td>
+                                            <td><h5>Rut : <span aling="text-left" t-field="o.employee_id.identification_id"/></h5></td>
                                           </tr>
                                     </table>
                                 </div>
