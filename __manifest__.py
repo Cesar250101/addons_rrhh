@@ -28,6 +28,9 @@
         'views/templates.xml',
         'reports/contrato_trabajo.xml',
         'reports/contrato_trabajo_template.xml',
+        'reports/comprobante_ausencia.xml',
+        'reports/comprobante_ausencia_template.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [

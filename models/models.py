@@ -20,3 +20,7 @@ class EntradasNomina(models.Model):
     apellido_paterno = fields.Char(string="Apellido Paterno", related="payslip_id.employee_id.last_name",required=False, )
     primer_nombre = fields.Char(string="Primer Nombre", related="payslip_id.employee_id.firstname",required=False, )
 
+class ContratoTrabajo(models.Model):
+    _inherit = 'hr.holidays'
+
+

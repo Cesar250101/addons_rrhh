@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_comprobante_ausencia">
+        <t t-name="addons_rrhh.report_comprobante_ausencia">
+                <t t-call="web.external_layout">
+                <t t-call="web.html_container">
+                    <t t-foreach="docs" t-as="o">
+                            <div class="page">
+
+                                <p><h1 align="center"><u>Comprobante de Vacaciones</u></h1></p>
+
+                                <br></br>
+                                <br></br>
+                                <p align="justify">
+                                    Con cumplimiento de las disposiciones legales vigente se deja constancia
+                                    que el trabajador : <span aling="text-left" t-field="o.employee_id.display_name"/> rut :<span aling="text-left" t-field="o.employee_id.identification_id"/>
+                                    hará uso de su periodo de vacaciones entre las fechas que se indican a continuación
+                                </p>
+                                <p align="justify">
+                                    <p><h3 align="center"><u>Periodo de vacaciones <span aling="text-right" t-field="o.date_from" t-field-options='{"format": "y"}'/></u></h3></p><br></br><br></br>
+                                <table style="width:100%">
+                                  <tr>
+                                    <th>Desde</th>
+                                    <th>Hasta</th>
+                                    <th>Días hábiles solicitados</th>
+                                  </tr>
+                                  <tr>
+                                    <td><span aling="text-left" t-field="o.date_from" t-field-options='{"format": "d MMMM y"}'/></td>
+                                    <td><span aling="text-left" t-field="o.date_to" t-field-options='{"format": "d MMMM y"}'/></td>
+                                    <td><span aling="text-left" t-field="o.number_of_days_temp"/></td>
+                                  </tr>
+                                </table>
+                                </p>
+                         <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+
+                                <div class="row">
+                                    <table class="table-responsive">
+                                          <tr>
+                                            <td><h4>Firma Empleador</h4></td>
+                                            <td><h4>Firma Empleador</h4></td>
+                                          </tr>
+                                          <tr>
+                                            <td><h4>Rut : </h4></td>
+                                            <td><h4>Rut :</h4></td>
+                                          </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </t>
+                     </t>
+                 </t>
+        </t>
+    </template>
+
+</odoo>
