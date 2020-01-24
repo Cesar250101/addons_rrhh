@@ -33,7 +33,7 @@
                                 </table>
                                 </p>
                                 <br></br>
-                                <strong><span>Días Pendientes  : </span><span aling="text-left" t-field="o.number_of_days_temp"/></strong>
+                                <strong><span>Días Pendientes  : </span><span aling="text-left" t-field="o.employee_id.leaves_count"/></strong>
                          <br></br>
                                 <br></br>
                                 <br></br>
